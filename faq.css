@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+:root {
+    --veryDarkGreyBlue: hsl(237, 12%, 33%);
+    --softred: hsl(14, 88%, 65%);
+    --darkGreyBlue: hsl(240, 5%, 91%);
+    --fontsize: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--fontsize);
+}
+
+body {
+    margin: 0;
+    font-family: "poppins", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #6dd66d, white, #6dd66d);
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.wrapper {
+    background: white;
+    border-radius: 20px;
+    height: 509px;
+    width: 920px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-gap: 6rem;
+}
+
+.answer {
+    display: none;
+}
+
+.accordion_wrapper {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion_question {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_accordion {
+    width: 360px;
+    border-bottom: 1px solid rgba(53, 52, 52, 0.116);
+}
+
+.title_accordion {
+    font-size: 3rem;
+    margin-top: 0px;
+}
+
+.question_title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1.4rem 0rem;
+    color: (var(--veryDarkGreyBlue));
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.question img {
+    align-self: center;
+}
+
+.image_wrapper {
+    position: relative;
+}
+
+.image_wrapper_inner {
+    background: url(./assets/images/WhatsApp_Image_2021-05-25_at_4.28.33_PM-removebg-preview.png);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 120% center;
+}
+
+.arrow:hover {
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in;
+}
+
+@media(max-width: 1281px) {
+    .wrapper {
+        width: 350px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr;
+        grid-gap: 0.5rem;
+        position: relative;
+        padding: 1rem;
+        height: 530px;
+    }
+    .image_wrapper {
+        background: url(./assets/images/WhatsApp_Image_2021-05-25_at_4.28.33_PM-removebg-preview.png);
+        background-repeat: no-repeat;
+        background-position: center 590%;
+        margin-top: 10px;
+    }
+    .image_wrapper_inner {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background-size: 72%;
+        background-position: center;
+        top: -129%;
+    }
+    .accordion_wrapper {
+        margin-top: 0px;
+    }
+    .question_answer_accordion {
+        width: 100%;
+    }
+    .title_accordion {
+        text-align: center;
+    }
+}
